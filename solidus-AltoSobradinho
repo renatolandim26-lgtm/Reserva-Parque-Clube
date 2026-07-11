@@ -1,0 +1,6 @@
+git init
+git add .
+git commit -m "Initial commit: Solidus - Alto Sobradinho"
+git branch -M main
+git remote add origin https://github.com/renatolandim26-lgtm/solidus-AltoSobradinho.git
+git push -u origin main

@@ -1,0 +1,8 @@
+node_modules/
+.manus-logs/
+*.tsbuildinfo
+.vite/
+.DS_Store
+.env
+.env.*
+
