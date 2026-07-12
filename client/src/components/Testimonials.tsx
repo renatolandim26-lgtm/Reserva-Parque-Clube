@@ -17,7 +17,7 @@ export default function Testimonials() {
               Você não está sozinho nessa jornada
             </h2>
             <p className="text-lg leading-relaxed text-foreground/70">
-              Nossa equipe de consultores está aqui para orientar você desde o primeiro contato até a entrega do seu imóvel.
+              Nossa equipe de consultores está aqui para orientar você desde o primeiro contato até a entrega das chaves no Reserva Parque Clube.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ export default function Testimonials() {
                     {consultant.role}
                   </p>
                   <p className="text-foreground/70 mb-6 leading-relaxed text-sm">
-                    Consultor parceiro da Riva Incorporadora, especializado em captação de leads orgânica e atendimento consultivo. Aqui para transformar seu sonho da casa própria em realidade.
+                    Consultor parceiro da Riva Incorporadora, especializado no Reserva Parque Clube. Focado em oferecer a melhor experiência de compra em Águas Claras, unindo natureza e lazer.
                   </p>
                   <a
                     href={`https://wa.me/${consultant.phone}?text=${encodeURIComponent(consultant.defaultMessage)}`}
@@ -69,9 +69,9 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-2">Atendimento 100% Consultivo</h4>
+                  <h4 className="font-bold text-primary mb-2">Atendimento Especializado</h4>
                   <p className="text-sm text-foreground/70">
-                    Não é venda agressiva. Você recebe orientação honesta e personalizada para sua situação específica.
+                    Conhecemos cada detalhe das 9 torres e dos mais de 40 itens de lazer do Reserva Parque Clube.
                   </p>
                 </div>
               </div>
@@ -85,9 +85,9 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-2">Qualificação de Crédito</h4>
+                  <h4 className="font-bold text-primary mb-2">Simulação Personalizada</h4>
                   <p className="text-sm text-foreground/70">
-                    Verificamos seu perfil desde o primeiro contato para encontrar as melhores condições para você.
+                    Fazemos a simulação do seu financiamento na hora, buscando as melhores taxas e condições da Riva.
                   </p>
                 </div>
               </div>
@@ -101,9 +101,9 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-2">Suporte em Cada Etapa</h4>
+                  <h4 className="font-bold text-primary mb-2">Visita ao Decorado</h4>
                   <p className="text-sm text-foreground/70">
-                    Do primeiro contato até a entrega do imóvel, você tem apoio completo para tomar as melhores decisões.
+                    Agende sua visita e conheça de perto o acabamento premium em porcelanato e a vista para o parque.
                   </p>
                 </div>
               </div>
@@ -117,9 +117,9 @@ export default function Testimonials() {
                   </div>
                 </div>
                 <div>
-                  <h4 className="font-bold text-primary mb-2">Resposta Rápida</h4>
+                  <h4 className="font-bold text-primary mb-2">Foco em Águas Claras</h4>
                   <p className="text-sm text-foreground/70">
-                    Atendimento via WhatsApp com resposta rápida às suas dúvidas e solicitações.
+                    Orientação completa sobre a região, escolas e as facilidades do novo acesso pela EPTG.
                   </p>
                 </div>
               </div>
@@ -129,10 +129,10 @@ export default function Testimonials() {
           {/* CTA Section */}
           <div className="rounded-3xl bg-gradient-to-r from-primary to-blue-600 p-8 md:p-12 text-center text-white">
             <h3 className="mb-4 text-3xl font-bold">
-              Pronto para começar sua jornada?
+              Pronto para viver ao lado do Parque?
             </h3>
             <p className="mb-8 text-lg opacity-90">
-              Clique abaixo e vamos conversar sobre como você pode sair do aluguel e ter sua casa própria no Alto Sobradinho.
+              Clique abaixo e vamos conversar sobre como você pode garantir sua unidade no Reserva Parque Clube.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               {consultants.map((consultant) => (

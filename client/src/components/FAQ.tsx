@@ -4,44 +4,44 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "Como funciona o financiamento no Alto Sobradinho?",
-    answer: "O Alto Sobradinho é financiado pela Caixa Econômica Federal através da Riva Incorporadora. Você pode usar FGTS, entrada facilitada ou uma combinação de ambos. Nós ajudamos você a encontrar a melhor opção para seu perfil."
+    question: "Como funciona o financiamento no Reserva Parque Clube?",
+    answer: "O Reserva Parque Clube é financiado através do Crédito Associativo ou Financiamento Bancário (SBPE). A Riva Incorporadora facilita o processo com entrada parcelada e uso do FGTS. Nós ajudamos você a encontrar a melhor modalidade para seu perfil."
   },
   {
     question: "Posso usar meu FGTS para comprar?",
-    answer: "Sim! Se você trabalha com carteira assinada e tem FGTS disponível, pode usar até 100% do valor acumulado como entrada ou abater do financiamento. Precisamos verificar seu saldo e elegibilidade."
+    answer: "Sim! O FGTS pode ser usado como parte da entrada ou para amortizar o saldo devedor. Precisamos apenas verificar seu tempo de contribuição e saldo disponível."
   },
   {
-    question: "O Alto Sobradinho é enquadrado no Minha Casa Minha Vida?",
-    answer: "Sim, o empreendimento é enquadrado no programa Minha Casa Minha Vida, oferecendo condições especiais de financiamento e subsídios para famílias com renda até 10 mil reais."
+    question: "O empreendimento está pronto ou em obras?",
+    answer: "O Reserva Parque Clube possui torres prontas para morar e torres em lançamento (como a Torre 6). Isso permite que você escolha entre a urgência da mudança imediata ou a valorização de um projeto em construção."
   },
   {
-    question: "Qual é o valor médio das parcelas?",
-    answer: "As parcelas variam conforme o valor do imóvel, entrada e prazo do financiamento. Para o apartamento de 2 quartos, as parcelas começam a partir de valores competitivos. Solicite uma simulação personalizada para seu perfil."
+    question: "Quais as opções de plantas disponíveis?",
+    answer: "Temos apartamentos de 2 quartos (63m² a 67m²), 3 quartos (81m² a 96m²) e coberturas lineares de 144m². Todas as unidades possuem suíte e varanda gourmet."
   },
   {
-    question: "Quanto preciso de entrada?",
-    answer: "Você pode começar com uma entrada a partir de 25 mil reais. Oferecemos planos de entrada facilitada conforme sua capacidade de pagamento. Quanto maior a entrada, menor a parcela mensal."
+    question: "Como é a área de lazer?",
+    answer: "É um verdadeiro clube privativo com mais de 40 itens, incluindo complexo de piscinas, spas, saunas, quadras poliesportivas, salões de festas e espaços pet. O lazer é entregue mobiliado e equipado."
   },
   {
-    question: "Qual é o prazo do financiamento?",
-    answer: "O financiamento pode ser de até 30 anos, dependendo de sua idade e renda. Quanto maior o prazo, menor a parcela mensal. Nós ajudamos você a encontrar o melhor prazo para sua situação."
+    question: "Onde exatamente fica a localização?",
+    answer: "Estamos na Rua 31 Norte, Lote 02, em Águas Claras. O condomínio fica ao lado do Parque Ecológico e possui uma passagem exclusiva para pedestres ligando ao Colégio La Salle."
   },
   {
-    question: "Posso investir no Alto Sobradinho?",
-    answer: "Sim! Muitos clientes compram para investimento. O Alto Sobradinho oferece excelente potencial de valorização pela localização estratégica e infraestrutura completa. Fale conosco para saber mais sobre oportunidades de investimento."
+    question: "Como funciona o novo acesso pela EPTG?",
+    answer: "O empreendimento está estrategicamente posicionado próximo à nova via de saída de Águas Claras, o que permite um fluxo de trânsito mais ágil para quem precisa se deslocar para o Plano Piloto ou Taguatinga."
   },
   {
-    question: "Qual é o processo de compra?",
-    answer: "O processo é simples: 1) Simulação e aprovação de crédito, 2) Escolha da planta, 3) Assinatura do contrato, 4) Acompanhamento da obra, 5) Entrega do imóvel. Nós orientamos você em cada etapa."
+    question: "Posso investir no Reserva Parque Clube?",
+    answer: "Sim! Águas Claras é uma das regiões que mais valoriza no DF. A combinação de lazer completo, localização ao lado do parque e o padrão Riva torna o imóvel um excelente ativo para revenda ou locação."
   },
   {
-    question: "Quando será a entrega do empreendimento?",
-    answer: "A obra está em andamento. Para informações atualizadas sobre o cronograma de entrega, entre em contato conosco pelo WhatsApp. Temos previsão de conclusão em breve."
+    question: "Qual é o valor médio da entrada?",
+    answer: "A entrada varia conforme o perfil de crédito e a unidade escolhida. Oferecemos planos flexíveis com a Riva. Solicite uma simulação gratuita para sabermos o valor exato para você."
   },
   {
-    question: "Posso visitar o empreendimento?",
-    answer: "Sim! Agende uma visita conosco. Você pode conhecer o terreno, ver o progresso da obra e receber uma orientação completa sobre o projeto. Clique em 'Simular agora' para agendar sua visita."
+    question: "Como agendar uma visita ao decorado?",
+    answer: "Basta clicar em 'Falar com Consultor' ou preencher o formulário. Agendamos sua visita para você conhecer o acabamento premium e o tour virtual das unidades."
   }
 ];
 
@@ -60,7 +60,7 @@ export default function FAQ() {
               Perguntas Frequentes
             </h2>
             <p className="text-lg leading-relaxed text-foreground/70">
-              Respondemos as principais dúvidas sobre financiamento, FGTS e o processo de compra no Alto Sobradinho.
+              Respondemos as principais dúvidas sobre financiamento, localização e o estilo de vida no Reserva Parque Clube.
             </p>
           </div>
 
@@ -112,7 +112,7 @@ export default function FAQ() {
               Ainda tem dúvidas?
             </h3>
             <p className="mb-6 text-foreground/70">
-              Fale diretamente com nossos consultores. Eles estão prontos para responder todas as suas perguntas e ajudar você a encontrar a melhor solução.
+              Fale diretamente com nossos consultores. Eles estão prontos para responder todas as suas perguntas e ajudar você a conquistar seu lugar no Reserva Parque.
             </p>
             <a
               href="#contato"
