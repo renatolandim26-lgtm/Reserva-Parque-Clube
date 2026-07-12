@@ -9,17 +9,42 @@ export const condominiumData = {
       {
         title: "Lazer de Clube",
         icon: "Waves",
-        description: "Piscinas, spa, sauna, academia, quadras, espaços gourmet e muito mais para sua família."
+        description: "Mais de 40 itens de lazer, incluindo piscinas adulto e infantil, spa e sauna para seu relaxamento."
       },
       {
         title: "Ao lado do Parque",
         icon: "Trees",
-        description: "Localização privilegiada ao lado do Parque Ecológico de Águas Claras, unindo natureza e conveniência."
+        description: "Privilégio de morar ao lado do Parque Ecológico de Águas Claras, com muito verde e ar puro."
+      },
+      {
+        title: "Segurança 24h",
+        icon: "Shield",
+        description: "Condomínio fechado com portaria 24 horas e controle de acesso rigoroso para sua tranquilidade."
+      },
+      {
+        title: "Academia Completa",
+        icon: "Dumbbell",
+        description: "Espaços fitness cobertos e descobertos, equipados para manter sua saúde em dia sem sair de casa."
+      },
+      {
+        title: "Espaços Gourmet",
+        icon: "Utensils",
+        description: "Salões de festa, churrasqueiras e espaços gourmet prontos para receber seus amigos e familiares."
+      },
+      {
+        title: "Passagem La Salle",
+        icon: "MapPin",
+        description: "Exclusividade: passagem direta para pedestres ligando o condomínio ao Colégio La Salle."
+      },
+      {
+        title: "Pet Place",
+        icon: "Dog",
+        description: "Espaços dedicados para o seu pet brincar e se exercitar com segurança."
       },
       {
         title: "Novo Acesso EPTG",
-        icon: "MapPin",
-        description: "Mobilidade facilitada com o novo acesso pela EPTG, fugindo do trânsito interno de Águas Claras."
+        icon: "Zap",
+        description: "Mobilidade facilitada com saída direta para a EPTG, evitando o trânsito interno da cidade."
       }
     ],
     units: [
