@@ -57,8 +57,7 @@ export const condominiumData = {
         price: "Consulte",
         image: "/images/planta-2q.jpg",
         highlight: "Planta inteligente com varanda, suíte e acabamento em porcelanato na sala e áreas molhadas.",
-        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 63,18m² (2 quartos) do Reserva Parque Clube.",
-        tourUrl: "https://meu.id/tour-virtual-2q"
+        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 63,18m² (2 quartos) do Reserva Parque Clube."
       },
       {
         id: 2,
@@ -69,8 +68,7 @@ export const condominiumData = {
         price: "Consulte",
         image: "/images/planta-3q.jpg",
         highlight: "Conforto para a família com 3 quartos, suíte, varanda e piso laminado nos dormitórios.",
-        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 81,88m² (3 quartos) do Reserva Parque Clube.",
-        tourUrl: "https://meu.id/tour-virtual-3q"
+        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 81,88m² (3 quartos) do Reserva Parque Clube."
       },
       {
         id: 3,

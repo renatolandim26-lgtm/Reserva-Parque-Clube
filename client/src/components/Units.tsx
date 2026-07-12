@@ -1,4 +1,4 @@
-import { Bath, BedDouble, MessageCircle, Ruler, Home, Eye } from "lucide-react";
+import { Bath, BedDouble, MessageCircle, Ruler, Home } from "lucide-react";
 import { condominiumData } from "@/lib/data";
 
 export default function Units() {
@@ -45,17 +45,6 @@ export default function Units() {
                 <div className="p-7 md:p-8">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-2xl font-bold text-primary">{unit.name}</h3>
-                    {unit.tourUrl && (
-                      <a 
-                        href={unit.tourUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1 text-xs font-bold text-[#1f9d55] hover:underline"
-                      >
-                        <Eye size={14} />
-                        TOUR VIRTUAL
-                      </a>
-                    )}
                   </div>
                   <p className="mb-6 min-h-14 leading-relaxed text-foreground/70">{unit.highlight}</p>
 
