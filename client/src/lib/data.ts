@@ -56,8 +56,8 @@ export const condominiumData = {
         bathrooms: 2,
         price: "Consulte",
         image: "/images/planta-2q.jpg",
-        highlight: "Conforto e praticidade em uma planta inteligente com varanda e suíte.",
-        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 2 quartos do Reserva Parque Clube.",
+        highlight: "Planta inteligente com varanda, suíte e acabamento em porcelanato na sala e áreas molhadas.",
+        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 63,18m² (2 quartos) do Reserva Parque Clube.",
         tourUrl: "https://meu.id/tour-virtual-2q"
       },
       {
@@ -68,8 +68,8 @@ export const condominiumData = {
         bathrooms: 2,
         price: "Consulte",
         image: "/images/planta-3q.jpg",
-        highlight: "Espaço ideal para sua família com acabamento premium em porcelanato.",
-        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 3 quartos do Reserva Parque Clube.",
+        highlight: "Conforto para a família com 3 quartos, suíte, varanda e piso laminado nos dormitórios.",
+        whatsappMessage: "Olá Renato! Vim pelo site e quero saber mais sobre a planta de 81,88m² (3 quartos) do Reserva Parque Clube.",
         tourUrl: "https://meu.id/tour-virtual-3q"
       },
       {
@@ -77,11 +77,11 @@ export const condominiumData = {
         name: "Cobertura Linear",
         area: "144,58 m²",
         bedrooms: 3,
-        bathrooms: 3,
+        bathrooms: 4,
         price: "Consulte",
         image: "/images/planta-cobertura.jpg",
-        highlight: "O topo do luxo: cobertura com hidromassagem instalada e vista livre para o parque.",
-        whatsappMessage: "Olá Renato! Vim pelo site e quero informações sobre a cobertura do Reserva Parque Clube."
+        highlight: "Exclusividade com 3 suítes, terraço gourmet e hidromassagem instalada com vista para o parque.",
+        whatsappMessage: "Olá Renato! Vim pelo site e quero informações sobre a cobertura linear de 144,58m² do Reserva Parque Clube."
       }
     ]
   },
@@ -112,6 +112,11 @@ export const condominiumData = {
         title: "Planta 3 Quartos (81,88m²)",
         description: "Conforto para toda a família com varanda gourmet e acabamento premium.",
         image: "/images/planta-3q.jpg"
+      },
+      {
+        title: "Cobertura Linear (144,58m²)",
+        description: "3 suítes, lavabo, banho de serviço, terraço com churrasqueira e hidromassagem.",
+        image: "/images/planta-cobertura.jpg"
       }
     ],
     empreendimento: [
