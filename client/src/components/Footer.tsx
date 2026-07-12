@@ -1,5 +1,4 @@
-import { Instagram, Facebook, MapPin, Phone } from "lucide-react";
-
+import { MapPin, Phone } from "lucide-react";
 import { condominiumData } from "@/lib/data";
 
 export default function Footer() {
@@ -12,10 +11,10 @@ export default function Footer() {
           <div className="md:block hidden">
             <h4 className="font-bold mb-4">Riva Incorporadora</h4>
             <p className="text-sm text-sidebar-foreground/80 leading-relaxed">
-              Especialistas em imóveis com conforto, localização privilegiada e alto potencial de valorização.
+              Especialistas em imóveis com conforto, localização privilegiada e alto potencial de valorização em Águas Claras.
             </p>
             <p className="text-sm text-sidebar-foreground/80 leading-relaxed mt-4">
-              Conectamos você às melhores oportunidades imobiliárias em {main.location}, com atendimento personalizado e segurança em cada etapa.
+              Conectamos você ao Reserva Parque Clube, com atendimento personalizado e segurança em cada etapa da sua conquista.
             </p>
           </div>
 
@@ -42,8 +41,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Redes Sociais Removidas */}
-
           {/* Links Rápidos */}
           <div>
             <h4 className="font-bold mb-4">Links Rápidos</h4>
@@ -51,13 +48,16 @@ export default function Footer() {
               <a href="#" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
                 Início
               </a>
-              <a href="#" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
-                Imóveis
-              </a>
-              <a href="#" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
+              <a href="#sobre" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
                 Sobre
               </a>
-              <a href="#" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
+              <a href="#galeria" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
+                Galeria
+              </a>
+              <a href="#plantas" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
+                Plantas
+              </a>
+              <a href="#contato" className="block text-sidebar-foreground/80 hover:text-white transition-colors">
                 Contato
               </a>
             </div>

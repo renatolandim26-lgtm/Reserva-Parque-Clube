@@ -1,23 +1,23 @@
-import { Building2, Clock3, ShieldCheck } from "lucide-react";
+import { Building2, Trees, MapPin } from "lucide-react";
 
 const stats = [
   {
-    icon: Clock3,
-    value: "15 min",
-    label: "do Plano Piloto",
-    description: "Acesso prático pela BR-020 para quem precisa se conectar com Brasília."
+    icon: Trees,
+    value: "Parque",
+    label: "ao seu lado",
+    description: "Privilégio de morar colado ao Parque Ecológico de Águas Claras, com muito verde e ar puro."
   },
   {
-    icon: ShieldCheck,
-    value: "24h",
-    label: "segurança e controle",
-    description: "Projeto pensado para oferecer tranquilidade no dia a dia da família."
+    icon: MapPin,
+    value: "EPTG",
+    label: "acesso facilitado",
+    description: "Novo acesso direto pela EPTG, garantindo mobilidade e evitando o trânsito interno da cidade."
   },
   {
     icon: Building2,
     value: "2 e 3",
     label: "quartos com suíte",
-    description: "Plantas com varanda gourmet, boa distribuição e opção para diferentes momentos de vida."
+    description: "Plantas modernas de 63m² e 81m², além de coberturas lineares de 144m² para quem busca o topo."
   }
 ];
 
@@ -27,15 +27,15 @@ export default function Introduction() {
       <div className="container mx-auto px-4">
         <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary/60">Alto Sobradinho</p>
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary/60">Reserva Parque Clube</p>
             <h2 className="mb-6 text-4xl font-bold leading-tight text-primary md:text-5xl">
-              Um condomínio vertical para morar bem em Sobradinho
+              O melhor lazer de clube de Águas Claras
             </h2>
             <p className="text-lg leading-relaxed text-foreground/75">
-              O Alto Sobradinho reúne localização estratégica, lazer completo e apartamentos de 2 e 3 quartos com suíte e varanda gourmet. A proposta é simples: oferecer conforto, segurança e uma jornada de compra assistida do primeiro contato até a escolha da planta.
+              O Reserva Parque Clube é o empreendimento que une a sofisticação de um clube privativo com a tranquilidade de viver ao lado do Parque Ecológico. Localizado na Rua 31 Norte, oferece o equilíbrio perfeito entre natureza e a conveniência urbana de Águas Claras.
             </p>
             <p className="mt-5 text-base leading-relaxed text-foreground/65">
-              Para gerar um atendimento mais rápido e certeiro, o site prioriza WhatsApp e simulação gratuita, com informações essenciais para você decidir com tranquilidade.
+              Com a Torre 6 em lançamento, você tem a oportunidade de garantir sua unidade em um projeto consolidado, com acabamento superior em porcelanato e uma área de lazer completa já pronta para uso.
             </p>
           </div>
 

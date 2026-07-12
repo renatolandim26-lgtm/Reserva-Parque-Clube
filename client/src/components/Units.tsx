@@ -1,4 +1,4 @@
-import { Bath, BedDouble, MessageCircle, Ruler, Home } from "lucide-react";
+import { Bath, BedDouble, MessageCircle, Ruler, Home, Eye } from "lucide-react";
 import { condominiumData } from "@/lib/data";
 
 export default function Units() {
@@ -12,7 +12,7 @@ export default function Units() {
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary/60">Plantas disponíveis</p>
           <h2 className="mb-4 text-4xl font-bold text-primary md:text-5xl">Escolha o espaço ideal para sua família</h2>
           <p className="text-lg leading-relaxed text-foreground/70">
-            Apartamentos de 2 e 3 quartos com suíte e varanda gourmet. Veja a melhor opção e fale comigo para receber uma simulação personalizada.
+            Apartamentos de 2 e 3 quartos com suíte e lazer completo. Veja a melhor opção e fale comigo para receber uma simulação personalizada.
           </p>
         </div>
 
@@ -28,7 +28,7 @@ export default function Units() {
                 <div className="relative h-72 overflow-hidden bg-blue-50">
                   <img
                     src={unit.image}
-                    alt={`Planta do apartamento ${unit.name} no Alto Sobradinho`}
+                    alt={`Planta do apartamento ${unit.name} no Reserva Parque Clube`}
                     className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
                     loading="lazy"
                   />
@@ -43,7 +43,20 @@ export default function Units() {
                 </div>
 
                 <div className="p-7 md:p-8">
-                  <h3 className="mb-3 text-2xl font-bold text-primary">{unit.name}</h3>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl font-bold text-primary">{unit.name}</h3>
+                    {unit.tourUrl && (
+                      <a 
+                        href={unit.tourUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center gap-1 text-xs font-bold text-[#1f9d55] hover:underline"
+                      >
+                        <Eye size={14} />
+                        TOUR VIRTUAL
+                      </a>
+                    )}
+                  </div>
                   <p className="mb-6 min-h-14 leading-relaxed text-foreground/70">{unit.highlight}</p>
 
                   <div className="mb-7 grid grid-cols-3 gap-3 text-center">
