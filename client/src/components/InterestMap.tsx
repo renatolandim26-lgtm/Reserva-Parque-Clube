@@ -1,6 +1,5 @@
 import React from "react";
 
-// Pontos de interesse com coordenadas (ajustadas para Águas Claras)
 const pointsOfInterest = [
   { name: "Parque Ecológico de Águas Claras", category: "LAZER" },
   { name: "Passagem Exclusiva La Salle", category: "EDUCAÇÃO" },
@@ -24,31 +23,21 @@ const pointsOfInterest = [
   { name: "McDonald's", category: "RESTAURANTES" },
 ];
 
-// Cores para cada categoria
-const categoryColors: Record<string, string> = {
-  "EDUCAÇÃO": "#3b82f6",
-  "MOBILIDADE": "#06b6d4",
-  "COMPRAS E SERVIÇOS": "#8b5cf6",
-  "LAZER": "#ec4899",
-  "SAÚDE": "#10b981",
-  "RESTAURANTES": "#f59e0b"
-};
-
 export default function InterestMap() {
   return (
-    <section id="localizacao" className="py-20 bg-white">
+    <section id="localizacao" className="py-20 bg-background border-t border-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary/60">Localização Privilegiada</p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary">Localização Privilegiada</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
             Tudo o que você precisa ao seu redor
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
+          <div className="h-1 w-20 bg-primary mx-auto mb-8" />
+          <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto px-2">
             O Reserva Parque Clube está no coração de Águas Claras, cercado por lazer, educação e as melhores conveniências da cidade.
           </p>
         </div>
 
-        {/* Lista de Pontos de Interesse */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {Object.entries(
             pointsOfInterest.reduce((acc, point) => {
@@ -59,16 +48,15 @@ export default function InterestMap() {
               return acc;
             }, {} as Record<string, typeof pointsOfInterest>)
           ).map(([category, items]) => (
-            <div key={category} className="rounded-3xl border border-blue-50 bg-white p-6 shadow-sm transition hover:shadow-lg">
-              <h3 className="text-lg sm:text-xl font-bold mb-4 text-primary" style={{ fontFamily: "var(--font-display)" }}>
+            <div key={category} className="rounded-3xl border border-primary/10 bg-card p-6 shadow-sm transition hover:border-primary/40">
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-primary">
                 {category}
               </h3>
               <ul className="space-y-2">
                 {items.map((item, itemIdx) => (
-                  <li key={itemIdx} className="flex items-start gap-3 text-foreground">
+                  <li key={itemIdx} className="flex items-start gap-3 text-white/80">
                     <span
-                      className="inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-[10px] font-bold flex-shrink-0"
-                      style={{ backgroundColor: categoryColors[item.category] }}
+                      className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-primary text-black text-[10px] font-bold flex-shrink-0"
                     >
                       {itemIdx + 1}
                     </span>

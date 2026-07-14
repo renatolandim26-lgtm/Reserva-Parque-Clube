@@ -14,7 +14,8 @@ import {
   Dices,
   Dog,
   Zap,
-  MapPin
+  MapPin,
+  Trees
 } from "lucide-react";
 import { condominiumData } from "@/lib/data";
 
@@ -33,19 +34,22 @@ const iconMap: Record<string, React.ReactNode> = {
   Dices: <Dices size={32} />,
   Dog: <Dog size={32} />,
   Zap: <Zap size={32} />,
-  MapPin: <MapPin size={32} />
+  MapPin: <MapPin size={32} />,
+  Trees: <Trees size={32} />
 };
 
 export default function Amenities() {
   return (
-    <section id="amenidades" className="py-32 bg-white">
+    <section id="amenidades" className="py-32 bg-background border-t border-primary/5">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16 sm:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4" style={{ fontFamily: "var(--font-display)" }}>
-            Área de Lazer e Comodidade
+          <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary">Exclusividade em cada detalhe</p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
+            Lazer de Clube e Conveniência
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-2xl mx-auto px-2 md:block hidden">
-            Desfrute de uma vida com qualidade, segurança e conforto em um ambiente pensado para você e sua família
+          <div className="h-1 w-20 bg-primary mx-auto mb-8" />
+          <p className="text-base sm:text-lg text-white/60 max-w-2xl mx-auto px-2">
+            Desfrute de uma vida com qualidade, segurança e conforto em um ambiente pensado para você e sua família.
           </p>
         </div>
 
@@ -53,23 +57,20 @@ export default function Amenities() {
           {condominiumData.main.amenities.map((amenity, index) => (
             <div
               key={index}
-              className="card-corporate text-center hover:shadow-xl rounded-2xl shadow-md transform hover:scale-105 transition-all duration-300 p-8"
+              className="card-corporate text-center p-8 bg-card border border-primary/5 hover:border-primary/40 transition-all duration-500"
             >
               <div className="flex justify-center mb-6 text-primary">
                 {iconMap[amenity.icon]}
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-foreground">
+              <h3 className="text-xl sm:text-2xl font-bold mb-3 text-white">
                 {amenity.title}
               </h3>
-              <p className="text-muted-foreground text-sm sm:text-base whitespace-pre-line md:block hidden">
+              <p className="text-white/50 text-sm sm:text-base leading-relaxed">
                 {amenity.description}
               </p>
             </div>
           ))}
         </div>
-
-        {/* Divider */}
-        <div className="my-16 sm:my-20 h-1 bg-gradient-to-r from-transparent via-border to-transparent"></div>
       </div>
     </section>
   );

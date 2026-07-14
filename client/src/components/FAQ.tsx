@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Quais as opções de plantas disponíveis?",
-    answer: "Temos apartamentos de 2 quartos (63m² a 67m²), 3 quartos (81m² a 96m²) e coberturas lineares de 144m². Todas as unidades possuem suíte e varanda gourmet."
+    answer: "Temos apartamentos de 2 quartos (63m²), 3 quartos (81m²) e coberturas lineares de 144m². Todas as unidades possuem suíte e varanda."
   },
   {
     question: "Como é a área de lazer?",
@@ -40,8 +40,8 @@ const faqs = [
     answer: "A entrada varia conforme o perfil de crédito e a unidade escolhida. Oferecemos planos flexíveis com a Riva. Solicite uma simulação gratuita para sabermos o valor exato para você."
   },
   {
-    question: "Como agendar uma visita ao decorado?",
-    answer: "Basta clicar em 'Falar com Consultor' ou preencher o formulário. Agendamos sua visita para você conhecer o acabamento premium e o tour virtual das unidades."
+    question: "Como agendar uma visita?",
+    answer: "Basta clicar em 'Falar com Consultor' ou preencher o formulário. Agendamos sua visita para você conhecer o acabamento premium e o projeto completo."
   }
 ];
 
@@ -49,17 +49,18 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-background border-t border-primary/5">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-3xl">
           <div className="mb-14 text-center">
-            <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary/60">
-              Dúvidas Frequentes
+            <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary">
+              Transparência e Confiança
             </p>
-            <h2 className="mb-4 text-4xl font-bold text-primary md:text-5xl">
+            <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">
               Perguntas Frequentes
             </h2>
-            <p className="text-lg leading-relaxed text-foreground/70">
+            <div className="h-1 w-20 bg-primary mx-auto mb-8" />
+            <p className="text-lg leading-relaxed text-white/60">
               Respondemos as principais dúvidas sobre financiamento, localização e o estilo de vida no Reserva Parque Clube.
             </p>
           </div>
@@ -68,11 +69,11 @@ export default function FAQ() {
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
-                className="rounded-xl border border-blue-100 overflow-hidden transition-all hover:border-primary/30 hover:shadow-md"
+                className="rounded-xl border border-primary/10 bg-card overflow-hidden transition-all hover:border-primary/30"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-blue-50/50 transition-colors"
+                  className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-white/5 transition-colors"
                 >
                   <h3 className="font-bold text-primary text-base md:text-lg">
                     {faq.question}
@@ -82,7 +83,7 @@ export default function FAQ() {
                     transition={{ duration: 0.3 }}
                     className="flex-shrink-0 ml-4"
                   >
-                    <ChevronDown size={24} className="text-primary/60" />
+                    <ChevronDown size={24} className="text-primary/40" />
                   </motion.div>
                 </button>
 
@@ -95,8 +96,8 @@ export default function FAQ() {
                       transition={{ duration: 0.3 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 py-4 bg-blue-50/50 border-t border-blue-100">
-                        <p className="text-foreground/70 leading-relaxed">
+                      <div className="px-6 py-4 bg-black/20 border-t border-primary/5">
+                        <p className="text-white/60 leading-relaxed">
                           {faq.answer}
                         </p>
                       </div>
@@ -107,16 +108,16 @@ export default function FAQ() {
             ))}
           </div>
 
-          <div className="mt-12 rounded-2xl bg-gradient-to-r from-primary/10 to-blue-100/50 p-8 text-center border border-primary/20">
+          <div className="mt-12 rounded-2xl bg-gradient-to-r from-primary/5 to-primary/10 p-8 text-center border border-primary/20">
             <h3 className="mb-3 text-xl font-bold text-primary">
               Ainda tem dúvidas?
             </h3>
-            <p className="mb-6 text-foreground/70">
+            <p className="mb-6 text-white/60">
               Fale diretamente com nossos consultores. Eles estão prontos para responder todas as suas perguntas e ajudar você a conquistar seu lugar no Reserva Parque.
             </p>
             <a
               href="#contato"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-white transition-all hover:bg-primary/90 active:scale-95"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-8 py-3 font-bold text-black transition-all hover:opacity-90 active:scale-95"
             >
               Falar com Consultor
             </a>
