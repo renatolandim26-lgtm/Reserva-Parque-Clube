@@ -83,6 +83,7 @@ export default function ContactSection() {
     <section id="contato" className="bg-background py-20 border-t border-primary/5">
       <div className="container mx-auto px-4">
         <div className="mx-auto max-w-6xl">
+          {/* Título da Seção */}
           <div className="mb-14 text-center">
             <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-primary">Atendimento Personalizado</p>
             <h2 className="mb-4 text-4xl font-bold text-white md:text-5xl">Receba uma simulação gratuita</h2>
@@ -92,26 +93,44 @@ export default function ContactSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[0.9fr_1.1fr] items-start">
-            <aside className="relative overflow-hidden rounded-[2rem] shadow-2xl transition-transform hover:scale-[1.02] border border-primary/20">
-              <button
-                onClick={() => setShowConsultantSelector(true)}
-                className="block w-full cursor-pointer"
-              >
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_1fr] items-center">
+            {/* Lado Esquerdo: Novo Card Premium */}
+            <div className="relative group overflow-hidden rounded-[2.5rem] border border-primary/30 shadow-[0_0_50px_rgba(197,160,89,0.1)] bg-[#050505]">
+              {/* Imagem de Fundo Premium */}
+              <div className="relative aspect-[16/9] lg:aspect-square overflow-hidden">
                 <img 
-                  src="/images/team-card.png" 
-                  alt="Cartão de Visita - Consultores Riva" 
-                  className="w-full h-auto"
+                  src="/images/team-premium.png" 
+                  alt="Davyd Duarte & Renato Landim - Consultores Riva" 
+                  className="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
                 />
-              </button>
+                {/* Overlay de Gradiente para o botão central */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60" />
+                
+                {/* Botão Centralizado Estilo Referência */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center p-6 mt-20 lg:mt-32">
+                  <button
+                    onClick={() => setShowConsultantSelector(true)}
+                    className="group/btn relative flex items-center gap-3 rounded-full bg-gradient-to-r from-[#C5A059] to-[#8E723D] px-8 py-4 font-bold text-black shadow-[0_10px_30px_rgba(197,160,89,0.4)] transition-all hover:scale-105 hover:shadow-[0_15px_40px_rgba(197,160,89,0.6)] active:scale-95"
+                  >
+                    <div className="rounded-full bg-black/10 p-1">
+                      <MessageCircle size={22} fill="currentColor" />
+                    </div>
+                    <span className="text-lg uppercase tracking-wider">Falar com um Consultor</span>
+                  </button>
+                  <p className="mt-4 text-xs font-bold uppercase tracking-[0.2em] text-[#C5A059] drop-shadow-lg">
+                    Atendimento rápido e personalizado
+                  </p>
+                </div>
+              </div>
 
+              {/* Seletor de Consultores (Modal) */}
               <AnimatePresence>
                 {showConsultantSelector && (
                   <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="fixed inset-0 z-[70] flex items-center justify-center bg-black/80 p-4 backdrop-blur-sm"
+                    className="fixed inset-0 z-[70] flex items-center justify-center bg-black/90 p-4 backdrop-blur-md"
                     onClick={() => setShowConsultantSelector(false)}
                   >
                     <motion.div
@@ -119,29 +138,29 @@ export default function ContactSection() {
                       animate={{ scale: 1, y: 0 }}
                       exit={{ scale: 0.9, y: 20 }}
                       onClick={(e) => e.stopPropagation()}
-                      className="w-full max-w-md overflow-hidden rounded-2xl bg-card border border-primary/20 shadow-2xl"
+                      className="w-full max-w-md overflow-hidden rounded-[2rem] bg-[#0A0A0A] border border-primary/30 shadow-[0_0_50px_rgba(197,160,89,0.2)]"
                     >
-                      <div className="bg-primary p-6 text-black">
+                      <div className="bg-gradient-to-r from-[#C5A059] to-[#8E723D] p-8 text-black">
                         <div className="flex items-center justify-between">
-                          <h3 className="text-lg font-bold">Escolha seu consultor</h3>
+                          <h3 className="text-xl font-black uppercase tracking-tight">Escolha seu consultor</h3>
                           <button 
                             onClick={() => setShowConsultantSelector(false)}
-                            className="rounded-full p-1 transition hover:bg-black/10"
+                            className="rounded-full p-2 transition hover:bg-black/10"
                           >
-                            <X size={20} />
+                            <X size={24} />
                           </button>
                         </div>
-                        <p className="text-sm font-semibold opacity-80">Selecione com quem deseja falar</p>
+                        <p className="mt-1 text-sm font-bold opacity-80 uppercase tracking-widest">Conexão direta via WhatsApp</p>
                       </div>
 
-                      <div className="flex flex-col p-4">
+                      <div className="flex flex-col p-6 space-y-4">
                         {contact.consultants.map((consultant, index) => (
                           <button
                             key={consultant.name}
                             onClick={() => handleConsultantClick(index)}
-                            className="flex items-center gap-4 rounded-xl p-4 transition hover:bg-white/5 active:scale-[0.98]"
+                            className="flex items-center gap-5 rounded-2xl p-5 transition-all hover:bg-white/5 hover:border-primary/20 border border-transparent active:scale-[0.98] group/item"
                           >
-                            <div className="h-16 w-16 overflow-hidden rounded-full border-2 border-primary/20 bg-black/40 flex-shrink-0">
+                            <div className="h-20 w-20 overflow-hidden rounded-full border-2 border-primary/30 bg-black shadow-lg flex-shrink-0">
                               <img 
                                 src={consultant.image} 
                                 alt={consultant.name}
@@ -149,12 +168,12 @@ export default function ContactSection() {
                               />
                             </div>
                             <div className="flex-1 text-left">
-                              <h4 className="text-base font-bold text-white">{consultant.name}</h4>
-                              <p className="text-xs text-white/40 uppercase tracking-wider">{consultant.role}</p>
-                              <p className="text-xs text-primary font-bold mt-1">{consultant.formattedPhone}</p>
-                            </div>
-                            <div className="rounded-full bg-primary/10 p-2 text-primary flex-shrink-0">
-                              <MessageCircle size={18} />
+                              <h4 className="text-lg font-bold text-white group-hover/item:text-primary transition-colors">{consultant.name}</h4>
+                              <p className="text-xs text-white/40 uppercase tracking-widest font-medium mb-2">{consultant.role}</p>
+                              <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold text-primary">
+                                <MessageCircle size={14} fill="currentColor" />
+                                {consultant.formattedPhone}
+                              </div>
                             </div>
                           </button>
                         ))}
@@ -163,56 +182,60 @@ export default function ContactSection() {
                   </motion.div>
                 )}
               </AnimatePresence>
-            </aside>
+            </div>
 
-            <div className="rounded-3xl border border-primary/10 bg-card p-6 shadow-lg md:p-8">
-              <form onSubmit={handleSubmit} className="grid gap-5">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Lado Direito: Formulário Premium */}
+            <div className="rounded-[2.5rem] border border-primary/10 bg-card p-8 shadow-2xl md:p-10 relative overflow-hidden">
+              {/* Sutil brilho dourado no fundo */}
+              <div className="absolute -top-24 -right-24 h-48 w-48 bg-primary/5 blur-[100px] rounded-full" />
+              
+              <form onSubmit={handleSubmit} className="grid gap-6 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">Nome *</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">Nome Completo *</label>
                     <Input
                       type="text"
                       placeholder="Seu nome"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                       required
-                      className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary"
+                      className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary transition-all placeholder:text-white/20"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">WhatsApp *</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">WhatsApp *</label>
                     <Input
                       type="tel"
                       placeholder="(61) 9 9999-9999"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       required
-                      className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary"
+                      className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary transition-all placeholder:text-white/20"
                     />
                   </div>
                 </div>
 
                 <div className="space-y-2">
-                  <label className="text-sm font-bold text-primary">E-mail *</label>
+                  <label className="text-xs font-black uppercase tracking-widest text-primary/80">E-mail Corporativo *</label>
                   <Input
                     type="email"
                     placeholder="seu@email.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     required
-                    className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary"
+                    className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary transition-all placeholder:text-white/20"
                   />
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">Objetivo</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">Objetivo</label>
                     <Select value={formData.interest} onValueChange={(value) => setFormData({ ...formData, interest: value })}>
-                      <SelectTrigger className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary">
+                      <SelectTrigger className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary">
                         <SelectValue />
                       </SelectTrigger>
-                      <SelectContent className="bg-card border-primary/20 text-white">
+                      <SelectContent className="bg-[#0A0A0A] border-primary/20 text-white">
                         <SelectItem value="morar">Para Morar</SelectItem>
                         <SelectItem value="investir">Para Investir</SelectItem>
                       </SelectContent>
@@ -220,12 +243,12 @@ export default function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">Prazo para compra</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">Prazo de Aquisição</label>
                     <Select value={formData.timeline} onValueChange={(value) => setFormData({ ...formData, timeline: value })}>
-                      <SelectTrigger className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary">
+                      <SelectTrigger className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary">
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
-                      <SelectContent className="bg-card border-primary/20 text-white">
+                      <SelectContent className="bg-[#0A0A0A] border-primary/20 text-white">
                         <SelectItem value="imediato">Imediato</SelectItem>
                         <SelectItem value="3meses">Até 3 meses</SelectItem>
                         <SelectItem value="6meses">Até 6 meses</SelectItem>
@@ -234,14 +257,14 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">Planta de interesse</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">Planta Desejada</label>
                     <Select value={formData.plan} onValueChange={(value) => setFormData({ ...formData, plan: value })}>
-                      <SelectTrigger className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary">
+                      <SelectTrigger className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary">
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
-                      <SelectContent className="bg-card border-primary/20 text-white">
+                      <SelectContent className="bg-[#0A0A0A] border-primary/20 text-white">
                         <SelectItem value="2quartos">2 Quartos</SelectItem>
                         <SelectItem value="3quartos">3 Quartos</SelectItem>
                         <SelectItem value="cobertura">Cobertura</SelectItem>
@@ -250,12 +273,12 @@ export default function ContactSection() {
                   </div>
 
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-primary">Entrada ou FGTS</label>
+                    <label className="text-xs font-black uppercase tracking-widest text-primary/80">Entrada / FGTS</label>
                     <Select value={formData.downPayment} onValueChange={(value) => setFormData({ ...formData, downPayment: value })}>
-                      <SelectTrigger className="h-12 rounded-xl border-2 border-primary/10 bg-black/20 text-white focus:border-primary">
+                      <SelectTrigger className="h-14 rounded-2xl border-2 border-primary/10 bg-black/40 text-white focus:border-primary">
                         <SelectValue placeholder="Selecione..." />
                       </SelectTrigger>
-                      <SelectContent className="bg-card border-primary/20 text-white">
+                      <SelectContent className="bg-[#0A0A0A] border-primary/20 text-white">
                         <SelectItem value="25k">Até 25 mil</SelectItem>
                         <SelectItem value="50k">Até 50 mil</SelectItem>
                         <SelectItem value="100k">Até 100 mil</SelectItem>
@@ -265,26 +288,26 @@ export default function ContactSection() {
                   </div>
                 </div>
 
-                <div className="pt-2">
-                  <p className="text-[10px] leading-relaxed text-white/40">
-                    Ao enviar, você concorda com nossa{" "}
+                <div className="pt-4">
+                  <p className="text-[10px] leading-relaxed text-white/30 text-center">
+                    Ao solicitar informações, você concorda com nossa{" "}
                     <button
                       type="button"
                       onClick={() => setIsPolicyModalOpen(true)}
-                      className="font-semibold text-primary underline hover:opacity-80"
+                      className="font-bold text-primary/80 underline hover:text-primary transition-colors"
                     >
                       Política de Privacidade
                     </button>{" "}
-                    e está ciente de que seus dados de contato serão compartilhados com os consultores parceiros para fins de atendimento personalizado.
+                    e autoriza o contato exclusivo de nossos consultores parceiros.
                   </p>
                 </div>
 
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="h-14 rounded-full bg-primary font-extrabold text-black transition-all hover:opacity-90 shadow-[0_0_15px_rgba(197,160,89,0.3)]"
+                  className="h-16 rounded-full bg-gradient-to-r from-[#C5A059] to-[#8E723D] font-black text-black uppercase tracking-widest transition-all hover:opacity-90 hover:shadow-[0_10px_30px_rgba(197,160,89,0.3)] active:scale-95"
                 >
-                  {isSubmitting ? "Enviando..." : "Solicitar informações agora"}
+                  {isSubmitting ? "Processando Solicitação..." : "Solicitar Atendimento Exclusivo"}
                 </Button>
 
                 <PrivacyPolicyModal isOpen={isPolicyModalOpen} onClose={() => setIsPolicyModalOpen(false)} />
